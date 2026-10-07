@@ -1,0 +1,37 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main_container {
+   width: 300px;
+   margin-top: 200px;
+   margin-left: auto;
+   margin-right: auto;
+   border: 1px solid #ded8d8;
+   padding: 30px 50px 25px 50px;
+   border-radius: 5px;
+   
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+label {
+    font-size: 13px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.result {
+    font-size: 14px;
+    margin-top: 20px;
+    background-color: #24dd08;
+}
