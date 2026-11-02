@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEMmate Workspace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>STEMmate - Facilitator Workspace</h1>
+    <hr>
+
+    <div class="workspace">
+        <div class="panel">
+            <h2>Available STEM Activities</h2>
+            <input type="text" id="search" placeholder="Type to filter activities..." oninput="filterCards()">
+
+            <div id="activities-list">
+                <div class="stem-card" onclick="selectActivity('Introduction to Robotics')">
+                    <h3>Introduction to Robotics</h3>
+                    <p>Build basic chassis structures and learn about gear mechanics.</p>
+                </div>
+                <div class="stem-card" onclick="selectActivity('Renewable Solar Energy')">
+                    <h3>Renewable Solar Energy</h3>
+                    <p>Construct a working miniature solar cooker with foil panels.</p>
+                </div>
+                <div class="stem-card" onclick="selectActivity('Binary Code Bracelets')">
+                    <h3>Binary Code Bracelets</h3>
+                    <p>Understand computer language fundamentals using colored beads.</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="panel">
+            <h2>Create Session Plan</h2>
+            <form id="session-form" onsubmit="savePlan(event)">
+                <label>Session Plan Title</label>
+                <input type="text" id="plan-title" required >
+
+                <label>Selected STEM Activity</label>
+                <input type="text" id="linked-activity" placeholder="Click an activity on the left..." readonly>
+
+                <label>Delivery Notes</label>
+                <textarea id="delivery-notes" rows="4" placeholder="Write offline notes here..."></textarea>
+
+                <button type="submit">Save Plan Locally</button>
+            </form>
+            <p id="status-message"></p>
+            <div class="saved-plans">
+                <h3>Stored Session Plans</h3>
+                <div id="saved-plans">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
